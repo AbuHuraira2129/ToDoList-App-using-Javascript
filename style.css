@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100%;
+}
+
+.container{
+  height: max-content;
+  background-color: linear-gradient(135deg, blue, rgb(138, 64, 203));
+  padding: 40px;
+}
+
+.todoList {
+  margin: 40px auto;
+  background-color: rgb(234, 240, 255);
+  width: 50%;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.todoList h1 {
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: rgb(1, 1, 49);
+  margin-bottom: 20px;
+}
+
+.todoList h1 img {
+  width: 36px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+
+.row button {
+  border: none;
+  outline: none;
+  background: blue;
+  padding: 15px 40px;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.list-container li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-container li::before {
+  content: " ";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-image: url(Images/circle.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 12px;
+}
+
+.list-container li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.list-container li.checked::before {
+  background-image: url(Images/check.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  color: #555;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: #edeef0;
+}
